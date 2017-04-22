@@ -65,7 +65,11 @@ namespace LD38.Quests
         /// <returns></returns>
         public string GetLongDescription()
         {
-            return "You arrived [...] and so on [...] rubber [...] slave [...] BOOM!";
+            return "You are landed on the micro planet \"Delta-8X34\".\n" +
+                   "Your mission: Find and repair a broken antenna for military purposes.\n\n" +
+                   "This was once an old military base. After the war of the chicken, this base " +
+                   "was empty but since 4 days the contact to an observation antenna is lost.\n\n" +
+                   "You need to find and repair the broken antenna.";
         }
 
         #endregion

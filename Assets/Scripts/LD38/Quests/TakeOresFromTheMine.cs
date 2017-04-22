@@ -25,7 +25,10 @@
 
         public string GetLongDescription()
         {
-            return "Mkay.. this is another quest.... oh oh!";
+            return "The antenna has taken more damage than expected.\n" +
+                   "You need to find additional resources to repair it.\n\n" +
+                   "This planet does have an old mine. Maybe there is enough " +
+                   "ore to repair the antenna.";
         }
 
         #endregion

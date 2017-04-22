@@ -34,6 +34,7 @@ namespace LD38.Quests
         public void End(QuestLog log)
         {
             Antenna.Disable();
+            Main.Get.Win();
         }
 
         public string GetDescription()
@@ -43,7 +44,8 @@ namespace LD38.Quests
 
         public string GetLongDescription()
         {
-            return "Oh yeah.. i like it!";
+            return "This should be enough ore to repair the antenna.\n\n" +
+                   "Go back and repair it!";
         }
 
         #endregion
