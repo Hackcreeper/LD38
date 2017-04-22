@@ -35,3 +35,6 @@ sysinfo.txt
 
 Assets/Tools*
 Assets/.reuniter_data
+
+.rider
+.idea
