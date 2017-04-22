@@ -24,6 +24,8 @@ namespace LD38
 
         [SerializeField] protected Text ObjectInfoText;
 
+        [SerializeField] protected RectTransform WinPanel;
+
         #endregion
 
         #region PUBLIC_METHODS
@@ -59,6 +61,12 @@ namespace LD38
         public ResourceManager Resources
         {
             get { return ResourceManager; }
+        }
+
+        public void Win()
+        {
+            SetLockedState(false);
+            WinPanel.gameObject.SetActive(true);
         }
 
         #endregion
