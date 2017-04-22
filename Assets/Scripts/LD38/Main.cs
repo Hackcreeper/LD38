@@ -1,16 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using LD38.Quests;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Main : MonoBehaviour {
+namespace LD38
+{
+    public class Main : MonoBehaviour
+    {
+        #region PROTECTED_VARS
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        protected QuestLog Log;
+
+        [SerializeField] protected Text QuestInfoText;
+
+        #endregion
+
+        #region PROTECTED_METHODS
+
+        protected virtual void Awake()
+        {
+            Log = new QuestLog(QuestInfoText);
+            Log.Start(Quest.FindTheAntenna);
+        }
+
+        protected virtual void Update()
+        {
+            Log.Update();
+        }
+
+        #endregion
+    }
 }

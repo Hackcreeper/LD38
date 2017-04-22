@@ -1,35 +1,15 @@
 fileFormatVersion: 2
-guid: 368fe5cbeccd4a14c82dab8c943fd2fd
-timeCreated: 1492847299
+guid: 5403d5e2cfa993c4ab291826c8fadd1a
+timeCreated: 1492860385
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Sphere_MeshPart0
-    100004: Sphere_MeshPart1
-    100006: Sphere_MeshPart2
-    100008: Sphere_MeshPart3
     400000: //RootNode
-    400002: Sphere_MeshPart0
-    400004: Sphere_MeshPart1
-    400006: Sphere_MeshPart2
-    400008: Sphere_MeshPart3
-    2300000: Sphere_MeshPart0
-    2300002: Sphere_MeshPart1
-    2300004: Sphere_MeshPart2
-    2300006: Sphere_MeshPart3
-    2300008: //RootNode
-    3300000: Sphere_MeshPart0
-    3300002: Sphere_MeshPart1
-    3300004: Sphere_MeshPart2
-    3300006: Sphere_MeshPart3
-    3300008: //RootNode
-    4300000: Sphere_MeshPart0
-    4300002: Sphere_MeshPart1
-    4300004: Sphere_MeshPart2
-    4300006: Sphere_MeshPart3
-    4300008: Icosphere
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Icosphere
     7400000: Default Take
     9500000: //RootNode
   materials:
