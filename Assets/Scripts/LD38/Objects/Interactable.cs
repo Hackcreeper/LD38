@@ -6,9 +6,27 @@ namespace LD38.Objects
     {
         #region PROTECTED_VARS
 
+        protected const float MaxDistance = 5f;
+
         [SerializeField] protected string Name;
 
-        protected bool IsHovering = false;
+        [SerializeField] protected bool IsInteractive = true;
+
+        protected bool IsHovering;
+
+        #endregion
+
+        #region PUBLIC_METHODS
+
+        public virtual void Enable()
+        {
+            IsInteractive = true;
+        }
+
+        public virtual void Disable()
+        {
+            IsInteractive = false;
+        }
 
         #endregion
 
@@ -26,11 +44,24 @@ namespace LD38.Objects
 
         protected virtual void Update()
         {
-            if (IsHovering && Input.GetButtonDown("Interact"))
+            if (IsHovering && IsInteractive)
             {
+                Main.Get.SetObjectText(string.Empty);
 
+                var distance = Vector3.Distance(Main.Get.Player.position, transform.position);
+                if (!(distance <= MaxDistance)) return;
+
+                Main.Get.SetObjectText("Press (E) to interact with: " + Name);
+
+                if (Input.GetButtonDown("Interact"))
+                {
+                    OnInteract();
+                    Main.Get.SetObjectText(string.Empty);
+                }
             }
         }
+
+        protected abstract void OnInteract();
 
         #endregion
     }

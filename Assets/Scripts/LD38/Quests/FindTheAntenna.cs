@@ -1,3 +1,4 @@
+using LD38.Objects;
 using UnityEngine;
 
 namespace LD38.Quests
@@ -6,7 +7,7 @@ namespace LD38.Quests
     {
         #region PROTECTED_VARS
 
-        protected Transform Antenna;
+        protected Antenna Antenna;
 
         #endregion
 
@@ -14,16 +15,17 @@ namespace LD38.Quests
 
         public void Start()
         {
-            Antenna = GameObject.FindGameObjectWithTag("Antenna").transform;
+            Antenna = Object.FindObjectOfType<Antenna>();
         }
 
         public bool IsFinished()
         {
-            return false;
+            return Antenna.GetState() == AntennaState.Inspected;
         }
 
         public void End()
         {
+            Antenna.Disable();
         }
 
         public string GetDescription()
