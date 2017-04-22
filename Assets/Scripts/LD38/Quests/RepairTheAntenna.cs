@@ -3,10 +3,17 @@ using UnityEngine;
 
 namespace LD38.Quests
 {
+    /// <summary>
+    /// Quest: Repair the antenna with the ore
+    /// Goal: Interfact with the inspected antenna
+    /// </summary>
     public class RepairTheAntenna : IQuest
     {
         #region PROTECTED_VARS
 
+        /// <summary>
+        /// The current antenna
+        /// </summary>
         protected Antenna Antenna;
 
         #endregion

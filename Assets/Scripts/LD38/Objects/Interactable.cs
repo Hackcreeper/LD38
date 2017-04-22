@@ -72,6 +72,13 @@ namespace LD38.Objects
             IsHovering = false;
         }
 
+        /// <summary>
+        /// If the player:
+        /// - Is pointing to the object
+        /// - Is near enough
+        /// - And presses the "Interact" button
+        /// Then the method "OnInteract" is called
+        /// </summary>
         protected virtual void Update()
         {
             if (IsHovering && IsInteractive)
