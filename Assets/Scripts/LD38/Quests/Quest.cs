@@ -10,6 +10,11 @@
         /// <summary>
         /// Goal: Search and find some ores in the mine
         /// </summary>
-        TakeOresFromTheMine
+        TakeOresFromTheMine,
+
+        /// <summary>
+        /// Goal: Repair the broken antenna with the ore
+        /// </summary>
+        RepairTheAntenna
     }
 }

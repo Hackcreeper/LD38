@@ -1,4 +1,6 @@
-﻿namespace LD38.Objects
+﻿using System;
+
+namespace LD38.Objects
 {
     public class Antenna : Interactable
     {
@@ -21,9 +23,19 @@
 
         protected override void OnInteract()
         {
-            if (State == AntennaState.Unknown)
+            switch (State)
             {
-                State = AntennaState.Inspected;
+                case AntennaState.Unknown:
+                    State = AntennaState.Inspected;
+                    break;
+                case AntennaState.Inspected:
+                    State = AntennaState.Repaired;
+                    break;
+                case AntennaState.Repaired:
+                    break;
+
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
 

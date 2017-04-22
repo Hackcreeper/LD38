@@ -15,6 +15,7 @@
 
         public void End(QuestLog log)
         {
+            log.Start(Quest.RepairTheAntenna);
         }
 
         public string GetDescription()

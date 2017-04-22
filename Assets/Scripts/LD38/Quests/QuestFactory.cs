@@ -14,6 +14,9 @@ namespace LD38.Quests
                 case Quest.TakeOresFromTheMine:
                     return new TakeOresFromTheMine();
 
+                case Quest.RepairTheAntenna:
+                    return new RepairTheAntenna();
+
                 default:
                     throw new ArgumentOutOfRangeException("quest", quest, null);
             }
