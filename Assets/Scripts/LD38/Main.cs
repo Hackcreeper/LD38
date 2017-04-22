@@ -1,4 +1,6 @@
-﻿using LD38.Quests;
+﻿using System.Security.Policy;
+using LD38.Quests;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,9 +12,15 @@ namespace LD38
 
         protected QuestLog Log;
 
+        protected ResourceManager ResourceManager;
+
         protected static Main Instance;
 
-        [SerializeField] protected Text QuestInfoText;
+        protected bool IsLocked = false;
+
+        [SerializeField] protected RectTransform QuestSidePanel;
+
+        [SerializeField] protected RectTransform QuestBigPanel;
 
         [SerializeField] protected Text ObjectInfoText;
 
@@ -35,6 +43,24 @@ namespace LD38
             get { return GameObject.FindGameObjectWithTag("Player").transform;  }
         }
 
+        public void SetLockedState(bool locked)
+        {
+            IsLocked = locked;
+
+            Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
+            Cursor.visible = !locked;
+        }
+
+        public bool GetLockedState()
+        {
+            return IsLocked;
+        }
+
+        public ResourceManager Resources
+        {
+            get { return ResourceManager; }
+        }
+
         #endregion
 
         #region PROTECTED_METHODS
@@ -46,8 +72,10 @@ namespace LD38
                 Instance = this;
             }
 
-            Log = new QuestLog(QuestInfoText);
+            Log = new QuestLog(QuestSidePanel, QuestBigPanel);
             Log.Start(Quest.FindTheAntenna);
+
+            ResourceManager = new ResourceManager();
         }
 
         protected virtual void Update()

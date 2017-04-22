@@ -27,15 +27,17 @@ namespace LD38.Gravity
 
         protected virtual void Awake()
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-
             Camera = UnityEngine.Camera.main.transform;
             Rigidbody = GetComponent<Rigidbody>();
         }
 
         protected virtual void Update()
         {
+            if (!Main.Get.GetLockedState())
+            {
+                return;
+            }
+
             transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * MouseSensitivityX);
             VerticalLookRotation += Input.GetAxis("Mouse Y") * MouseSensitivityY;
             VerticalLookRotation = Mathf.Clamp(VerticalLookRotation, -60, 60);

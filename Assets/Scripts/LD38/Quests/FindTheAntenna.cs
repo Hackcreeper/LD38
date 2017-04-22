@@ -13,24 +13,30 @@ namespace LD38.Quests
 
         #region PUBLIC_METHODS
 
-        public void Start()
+        public void Start(QuestLog log)
         {
             Antenna = Object.FindObjectOfType<Antenna>();
         }
 
-        public bool IsFinished()
+        public bool IsFinished(QuestLog log)
         {
             return Antenna.GetState() == AntennaState.Inspected;
         }
 
-        public void End()
+        public void End(QuestLog log)
         {
             Antenna.Disable();
+            log.Start(Quest.TakeOresFromTheMine);
         }
 
         public string GetDescription()
         {
             return "Find the broken antenna!";
+        }
+
+        public string GetLongDescription()
+        {
+            return "You arrived [...] and so on [...] rubber [...] slave [...] BOOM!";
         }
 
         #endregion
