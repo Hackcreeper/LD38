@@ -1,6 +1,4 @@
-﻿using System.Security.Policy;
-using LD38.Quests;
-using UnityEditor;
+﻿using LD38.Quests;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +14,7 @@ namespace LD38
 
         protected static Main Instance;
 
-        protected bool IsLocked = false;
+        protected bool IsLocked;
 
         [SerializeField] protected RectTransform QuestSidePanel;
 
@@ -25,6 +23,10 @@ namespace LD38
         [SerializeField] protected Text ObjectInfoText;
 
         [SerializeField] protected RectTransform WinPanel;
+
+        [SerializeField] protected GameObject RepairedAntenna;
+
+        [SerializeField] protected GameObject BrokenAntenna;
 
         #endregion
 
@@ -67,6 +69,9 @@ namespace LD38
         {
             SetLockedState(false);
             WinPanel.gameObject.SetActive(true);
+
+            BrokenAntenna.SetActive(false);
+            RepairedAntenna.SetActive(true);
         }
 
         #endregion
