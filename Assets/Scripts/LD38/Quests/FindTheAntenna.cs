@@ -15,12 +15,11 @@ namespace LD38.Quests
         public void Start()
         {
             Antenna = GameObject.FindGameObjectWithTag("Antenna").transform;
-            Player
         }
 
-        public bool IsFinished(Transform player)
+        public bool IsFinished()
         {
-
+            return false;
         }
 
         public void End()

@@ -28,7 +28,7 @@ namespace LD38.Objects
         {
             if (IsHovering && Input.GetButtonDown("Interact"))
             {
-                
+
             }
         }
 
