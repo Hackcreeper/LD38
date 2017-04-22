@@ -5,6 +5,16 @@
         /// <summary>
         /// Goal: Search and find the corrupted antenna
         /// </summary>
-        FindTheAntenna
+        FindTheAntenna,
+
+        /// <summary>
+        /// Goal: Search and find some ores in the mine
+        /// </summary>
+        TakeOresFromTheMine,
+
+        /// <summary>
+        /// Goal: Repair the broken antenna with the ore
+        /// </summary>
+        RepairTheAntenna
     }
 }

@@ -1,9 +1,9 @@
-using LD38.Objects;
+﻿using LD38.Objects;
 using UnityEngine;
 
 namespace LD38.Quests
 {
-    public class FindTheAntenna : IQuest
+    public class RepairTheAntenna : IQuest
     {
         #region PROTECTED_VARS
 
@@ -16,27 +16,27 @@ namespace LD38.Quests
         public void Start(QuestLog log)
         {
             Antenna = Object.FindObjectOfType<Antenna>();
+            Antenna.Enable();
         }
 
         public bool IsFinished(QuestLog log)
         {
-            return Antenna.GetState() == AntennaState.Inspected;
+            return Antenna.GetState() == AntennaState.Repaired;
         }
 
         public void End(QuestLog log)
         {
             Antenna.Disable();
-            log.Start(Quest.TakeOresFromTheMine);
         }
 
         public string GetDescription()
         {
-            return "Find the broken antenna!";
+            return "Repair the broken antenna!";
         }
 
         public string GetLongDescription()
         {
-            return "You arrived [...] and so on [...] rubber [...] slave [...] BOOM!";
+            return "Oh yeah.. i like it!";
         }
 
         #endregion
