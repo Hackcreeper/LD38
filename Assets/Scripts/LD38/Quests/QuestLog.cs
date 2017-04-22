@@ -27,6 +27,7 @@ namespace LD38.Quests
         public virtual void Start(Quest quest)
         {
             CurrentQuest = QuestFactory.Make(quest);
+            CurrentQuest.Start();
 
             // Update the UI
             QuestInfo.text = CurrentQuest.GetDescription();
