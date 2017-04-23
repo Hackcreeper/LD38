@@ -4,10 +4,10 @@ using UnityEngine;
 namespace LD38.Quests
 {
     /// <summary>
-    /// Quest: Search and find the antenna.
+    /// Quest: Analyse the broken antenna.
     /// Goal: Interact with the broken antenna
     /// </summary>
-    public class FindTheAntenna : IQuest
+    public class AnalyseTheAntenna : IQuest
     {
         #region PROTECTED_VARS
 
@@ -64,7 +64,7 @@ namespace LD38.Quests
         /// <returns></returns>
         public string GetDescription()
         {
-            return "Find the broken antenna!";
+            return "Analyse the broken antenna!";
         }
 
         /// <summary>
@@ -73,11 +73,7 @@ namespace LD38.Quests
         /// <returns></returns>
         public string GetLongDescription()
         {
-            return "You are landed on the micro planet \"Delta-8X34\".\n" +
-                   "Your mission: Find and repair a broken antenna for military purposes.\n\n" +
-                   "This was once an old military base. After the war of the chicken, this base " +
-                   "was empty but since 4 days the contact to an observation antenna is lost.\n\n" +
-                   "You need to find and repair the broken antenna.";
+            return "The base is still intact. You should begin to analyse the broken antenna.";
         }
 
         #endregion

@@ -93,7 +93,7 @@ namespace LD38
             Camera.main.transform.localPosition = new Vector3(0, 1, 0);
             Laser.gameObject.SetActive(true);
 
-            Log.Start(Quest.FindTheAntenna);
+            Log.Start(Quest.FindTheBase);
         }
 
         #endregion
