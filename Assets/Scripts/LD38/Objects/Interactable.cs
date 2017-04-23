@@ -26,6 +26,11 @@ namespace LD38.Objects
         [SerializeField] protected bool IsInteractive = true;
 
         /// <summary>
+        /// Does this object needs to be mined?
+        /// </summary>
+        [SerializeField] protected bool NeedToMine;
+
+        /// <summary>
         /// Does the player currently hover over it?
         /// </summary>
         protected bool IsHovering;
@@ -93,12 +98,26 @@ namespace LD38.Objects
                 var distance = Vector3.Distance(Main.Get.Player.position, transform.position);
                 if (!(distance <= MaxDistance)) return;
 
-                Main.Get.SetObjectText("Press (E) to interact with: " + Name);
-
-                if (Input.GetButtonDown("Interact"))
+                if (!NeedToMine)
                 {
-                    OnInteract();
-                    Main.Get.SetObjectText(string.Empty);
+                    Main.Get.SetObjectText("Press (E) to interact with: " + Name);
+
+                    if (Input.GetButtonDown("Interact"))
+                    {
+                        OnInteract();
+                        Main.Get.SetObjectText(string.Empty);
+                    }
+                }
+                else
+                {
+                    Main.Get.SetObjectText("Activate pickaxe (Q) and press (Left Mouse) to mine: " + Name);
+
+                    var tool = FindObjectOfType<Laser>();
+                    if (tool.IsMining() && tool.GetMineTime() >= 1.5f)
+                    {
+                        OnInteract();
+                        Main.Get.SetObjectText("");
+                    }
                 }
             }
         }
