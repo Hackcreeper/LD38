@@ -28,6 +28,8 @@ namespace LD38
 
         [SerializeField] protected GameObject BrokenAntenna;
 
+        [SerializeField] protected Transform Laser;
+
         protected bool Started;
 
         #endregion
@@ -45,7 +47,8 @@ namespace LD38
         }
 
         public Transform Player
-        {     get { return GameObject.FindGameObjectWithTag("Player").transform;  }
+        {
+            get { return GameObject.FindGameObjectWithTag("Player").transform;  }
         }
 
         public void SetLockedState(bool locked)
@@ -85,10 +88,10 @@ namespace LD38
 
         public void StartGame()
         {
-            // Set camera...
             Player.gameObject.SetActive(true);
             Camera.main.transform.SetParent(Player);
             Camera.main.transform.localPosition = new Vector3(0, 1, 0);
+            Laser.gameObject.SetActive(true);
 
             Log.Start(Quest.FindTheAntenna);
         }
