@@ -30,7 +30,13 @@ namespace LD38
 
         [SerializeField] protected Transform Laser;
 
+        [SerializeField] protected Transform Spaceship;
+
+        [SerializeField] protected Transform Intro;
+
         protected bool Started;
+
+        protected bool IntroStarted;
 
         #endregion
 
@@ -114,6 +120,17 @@ namespace LD38
 
         protected virtual void Update()
         {
+            if (!IntroStarted && Input.anyKeyDown)
+            {
+                Intro.gameObject.SetActive(false);
+                Camera.main.transform.SetParent(Spaceship);
+                Camera.main.transform.localPosition = new Vector3(-6, 66.4f, 24.7f);
+                Camera.main.transform.localRotation = Quaternion.Euler(new Vector3(-100.021f, 0, 0));
+
+                Spaceship.GetComponent<Animator>().SetBool("Started", true);
+                IntroStarted = true;
+            }
+
             Log.Update();
         }
 
