@@ -34,6 +34,8 @@ namespace LD38
 
         [SerializeField] protected Transform Intro;
 
+        [SerializeField] protected Transform PauseMenu;
+
         protected bool Started;
 
         protected bool IntroStarted;
@@ -102,6 +104,11 @@ namespace LD38
             Log.Start(Quest.FindTheBase);
         }
 
+        public bool Paused
+        {
+            get { return PauseMenu.gameObject.activeSelf; }
+        }
+
         #endregion
 
         #region PROTECTED_METHODS
@@ -129,6 +136,22 @@ namespace LD38
 
                 Spaceship.GetComponent<Animator>().SetBool("Started", true);
                 IntroStarted = true;
+            }
+            else if (IntroStarted && Input.GetKeyDown(KeyCode.Escape))
+            {
+                var paused = !PauseMenu.gameObject.activeSelf;
+
+                PauseMenu.gameObject.SetActive(paused);
+                Time.timeScale = paused ? 0f : 1f;
+
+                if (paused)
+                {
+                    SetLockedState(false);
+                }
+                else if (!Log.IsDialogOpen)
+                {
+                    SetLockedState(true);
+                }
             }
 
             Log.Update();

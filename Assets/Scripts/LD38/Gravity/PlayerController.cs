@@ -135,6 +135,11 @@ namespace LD38.Gravity
         /// </summary>
         protected virtual void RotateCamera()
         {
+            if (Main.Get.Paused)
+            {
+                return;
+            }
+
             transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * MouseSensitivityX);
             VerticalLookRotation += Input.GetAxis("Mouse Y") * MouseSensitivityY;
             VerticalLookRotation = Mathf.Clamp(VerticalLookRotation, -60, 60);

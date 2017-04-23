@@ -40,6 +40,8 @@ namespace LD38.Quests
         /// </summary>
         protected Button QuestButton;
 
+        protected bool DialogOpen;
+
         #endregion
 
         #region CONSTRUCTOR
@@ -84,6 +86,8 @@ namespace LD38.Quests
 
             LongQuestInfo.text = CurrentQuest.GetLongDescription();
             QuestInfo.text = CurrentQuest.GetDescription();
+
+            DialogOpen = true;
         }
 
         /// <summary>
@@ -100,6 +104,11 @@ namespace LD38.Quests
             quest.End(this);
         }
 
+        public bool IsDialogOpen
+        {
+            get { return DialogOpen;  }
+        }
+
         #endregion
 
         #region PROTECTED_METHODS
@@ -110,6 +119,8 @@ namespace LD38.Quests
             {
                 QuestBigPanel.gameObject.SetActive(false);
                 QuestSidePanel.gameObject.SetActive(true);
+
+                DialogOpen = false;
 
                 Main.Get.SetLockedState(true);
             });
