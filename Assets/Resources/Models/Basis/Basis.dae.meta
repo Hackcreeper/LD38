@@ -1,0 +1,110 @@
+fileFormatVersion: 2
+guid: c23180bd89d000342a9aff8e09adcf41
+timeCreated: 1492948187
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: basis.dach
+    100004: basis.fundament
+    100006: basis.ofen
+    100008: basis.tuer
+    100010: basis.tuerfenster
+    100012: basis.walls
+    400000: //RootNode
+    400002: basis.dach
+    400004: basis.fundament
+    400006: basis.ofen
+    400008: basis.tuer
+    400010: basis.tuerfenster
+    400012: basis.walls
+    2300000: basis.dach
+    2300002: basis.fundament
+    2300004: basis.ofen
+    2300006: basis.tuer
+    2300008: basis.tuerfenster
+    2300010: basis.walls
+    3300000: basis.dach
+    3300002: basis.fundament
+    3300004: basis.ofen
+    3300006: basis.tuer
+    3300008: basis.tuerfenster
+    3300010: basis.walls
+    4300000: basis.dach
+    4300002: basis.ofen
+    4300004: basis.tuerfenster
+    4300006: basis.tuer
+    4300008: basis.walls
+    4300010: basis.fundament
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
