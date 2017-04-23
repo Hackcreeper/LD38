@@ -20,6 +20,9 @@ namespace LD38.Quests
                 case Quest.RepairTheAntenna:
                     return new RepairTheAntenna();
 
+                case Quest.GoBackToSpaceship:
+                    return new GoBackToSpaceship();
+
                 default:
                     throw new ArgumentOutOfRangeException("quest", quest, null);
             }

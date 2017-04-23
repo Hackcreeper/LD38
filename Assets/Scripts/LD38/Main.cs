@@ -28,6 +28,8 @@ namespace LD38
 
         [SerializeField] protected GameObject BrokenAntenna;
 
+        protected bool Started;
+
         #endregion
 
         #region PUBLIC_METHODS
@@ -43,8 +45,7 @@ namespace LD38
         }
 
         public Transform Player
-        {
-            get { return GameObject.FindGameObjectWithTag("Player").transform;  }
+        {     get { return GameObject.FindGameObjectWithTag("Player").transform;  }
         }
 
         public void SetLockedState(bool locked)
@@ -69,9 +70,27 @@ namespace LD38
         {
             SetLockedState(false);
             WinPanel.gameObject.SetActive(true);
+        }
 
+        public void RepairAntenna()
+        {
             BrokenAntenna.SetActive(false);
             RepairedAntenna.SetActive(true);
+        }
+
+        public bool HasGameStarted
+        {
+            get { return Started; }
+        }
+
+        public void StartGame()
+        {
+            // Set camera...
+            Player.gameObject.SetActive(true);
+            Camera.main.transform.SetParent(Player);
+            Camera.main.transform.localPosition = new Vector3(0, 1, 0);
+
+            Log.Start(Quest.FindTheAntenna);
         }
 
         #endregion
@@ -86,7 +105,6 @@ namespace LD38
             }
 
             Log = new QuestLog(QuestSidePanel, QuestBigPanel);
-            Log.Start(Quest.FindTheAntenna);
 
             ResourceManager = new ResourceManager();
         }

@@ -15,6 +15,11 @@
         /// <summary>
         /// Goal: Repair the broken antenna with the ore
         /// </summary>
-        RepairTheAntenna
+        RepairTheAntenna,
+
+        /// <summary>
+        /// Goal: Go back to your space ship and fly away
+        /// </summary>
+        GoBackToSpaceship
     }
 }
