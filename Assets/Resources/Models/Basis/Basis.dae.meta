@@ -1,42 +1,82 @@
 fileFormatVersion: 2
-guid: c23180bd89d000342a9aff8e09adcf41
-timeCreated: 1492948187
+guid: e500638238a57304886c892a88ed7cf8
+timeCreated: 1492962381
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: basis.dach
-    100004: basis.fundament
-    100006: basis.ofen
-    100008: basis.tuer
-    100010: basis.tuerfenster
-    100012: basis.walls
+    100002: basis.bett
+    100004: basis.dach
+    100006: basis.fundament
+    100008: basis.kohle
+    100010: basis.ofen
+    100012: basis.ofen_rueckwand
+    100014: basis.rohes_eisen
+    100016: basis.schrank
+    100018: basis.schranktuer_links
+    100020: basis.schranktuer_rechts
+    100022: basis.schublade
+    100024: basis.tuer
+    100026: basis.tuerfenster
+    100028: basis.waende
     400000: //RootNode
-    400002: basis.dach
-    400004: basis.fundament
-    400006: basis.ofen
-    400008: basis.tuer
-    400010: basis.tuerfenster
-    400012: basis.walls
-    2300000: basis.dach
-    2300002: basis.fundament
-    2300004: basis.ofen
-    2300006: basis.tuer
-    2300008: basis.tuerfenster
-    2300010: basis.walls
-    3300000: basis.dach
-    3300002: basis.fundament
-    3300004: basis.ofen
-    3300006: basis.tuer
-    3300008: basis.tuerfenster
-    3300010: basis.walls
-    4300000: basis.dach
-    4300002: basis.ofen
-    4300004: basis.tuerfenster
-    4300006: basis.tuer
-    4300008: basis.walls
-    4300010: basis.fundament
+    400002: basis.bett
+    400004: basis.dach
+    400006: basis.fundament
+    400008: basis.kohle
+    400010: basis.ofen
+    400012: basis.ofen_rueckwand
+    400014: basis.rohes_eisen
+    400016: basis.schrank
+    400018: basis.schranktuer_links
+    400020: basis.schranktuer_rechts
+    400022: basis.schublade
+    400024: basis.tuer
+    400026: basis.tuerfenster
+    400028: basis.waende
+    2300000: basis.bett
+    2300002: basis.dach
+    2300004: basis.fundament
+    2300006: basis.kohle
+    2300008: basis.ofen
+    2300010: basis.ofen_rueckwand
+    2300012: basis.rohes_eisen
+    2300014: basis.schrank
+    2300016: basis.schranktuer_links
+    2300018: basis.schranktuer_rechts
+    2300020: basis.schublade
+    2300022: basis.tuer
+    2300024: basis.tuerfenster
+    2300026: basis.waende
+    3300000: basis.bett
+    3300002: basis.dach
+    3300004: basis.fundament
+    3300006: basis.kohle
+    3300008: basis.ofen
+    3300010: basis.ofen_rueckwand
+    3300012: basis.rohes_eisen
+    3300014: basis.schrank
+    3300016: basis.schranktuer_links
+    3300018: basis.schranktuer_rechts
+    3300020: basis.schublade
+    3300022: basis.tuer
+    3300024: basis.tuerfenster
+    3300026: basis.waende
+    4300000: basis.schranktuer_rechts
+    4300002: basis.schranktuer_links
+    4300004: basis.schrank
+    4300006: basis.schublade
+    4300008: basis.bett
+    4300010: basis.rohes_eisen
+    4300012: basis.kohle
+    4300014: basis.ofen_rueckwand
+    4300016: basis.ofen
+    4300018: basis.tuerfenster
+    4300020: basis.tuer
+    4300022: basis.dach
+    4300024: basis.waende
+    4300026: basis.fundament
     9500000: //RootNode
   materials:
     importMaterials: 1
