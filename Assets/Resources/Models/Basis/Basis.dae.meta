@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e500638238a57304886c892a88ed7cf8
-timeCreated: 1492962381
+guid: 5a4d9146afea46147ade2e92c4940048
+timeCreated: 1492965602
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -17,9 +17,10 @@ ModelImporter:
     100018: basis.schranktuer_links
     100020: basis.schranktuer_rechts
     100022: basis.schublade
-    100024: basis.tuer
-    100026: basis.tuerfenster
-    100028: basis.waende
+    100024: basis.tisch
+    100026: basis.tuer
+    100028: basis.tuerfenster
+    100030: basis.waende
     400000: //RootNode
     400002: basis.bett
     400004: basis.dach
@@ -32,9 +33,10 @@ ModelImporter:
     400018: basis.schranktuer_links
     400020: basis.schranktuer_rechts
     400022: basis.schublade
-    400024: basis.tuer
-    400026: basis.tuerfenster
-    400028: basis.waende
+    400024: basis.tisch
+    400026: basis.tuer
+    400028: basis.tuerfenster
+    400030: basis.waende
     2300000: basis.bett
     2300002: basis.dach
     2300004: basis.fundament
@@ -46,9 +48,10 @@ ModelImporter:
     2300016: basis.schranktuer_links
     2300018: basis.schranktuer_rechts
     2300020: basis.schublade
-    2300022: basis.tuer
-    2300024: basis.tuerfenster
-    2300026: basis.waende
+    2300022: basis.tisch
+    2300024: basis.tuer
+    2300026: basis.tuerfenster
+    2300028: basis.waende
     3300000: basis.bett
     3300002: basis.dach
     3300004: basis.fundament
@@ -60,23 +63,25 @@ ModelImporter:
     3300016: basis.schranktuer_links
     3300018: basis.schranktuer_rechts
     3300020: basis.schublade
-    3300022: basis.tuer
-    3300024: basis.tuerfenster
-    3300026: basis.waende
-    4300000: basis.schranktuer_rechts
-    4300002: basis.schranktuer_links
-    4300004: basis.schrank
-    4300006: basis.schublade
-    4300008: basis.bett
-    4300010: basis.rohes_eisen
-    4300012: basis.kohle
-    4300014: basis.ofen_rueckwand
-    4300016: basis.ofen
-    4300018: basis.tuerfenster
-    4300020: basis.tuer
-    4300022: basis.dach
-    4300024: basis.waende
-    4300026: basis.fundament
+    3300022: basis.tisch
+    3300024: basis.tuer
+    3300026: basis.tuerfenster
+    3300028: basis.waende
+    4300000: basis.tisch
+    4300002: basis.schranktuer_rechts
+    4300004: basis.schranktuer_links
+    4300006: basis.schrank
+    4300008: basis.schublade
+    4300010: basis.bett
+    4300012: basis.rohes_eisen
+    4300014: basis.kohle
+    4300016: basis.ofen_rueckwand
+    4300018: basis.ofen
+    4300020: basis.tuerfenster
+    4300022: basis.tuer
+    4300024: basis.dach
+    4300026: basis.waende
+    4300028: basis.fundament
     9500000: //RootNode
   materials:
     importMaterials: 1
