@@ -1,4 +1,6 @@
-﻿namespace LD38.Quests
+﻿using UnityEngine.TestTools;
+
+namespace LD38.Quests
 {
     public class TakeOresFromTheMine : IQuest
     {
@@ -15,7 +17,7 @@
 
         public void End(QuestLog log)
         {
-            log.Start(Quest.RepairTheAntenna);
+            log.Start(Quest.MeltTheOres);
         }
 
         public string GetDescription()

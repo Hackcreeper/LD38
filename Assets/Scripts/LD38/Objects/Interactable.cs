@@ -88,6 +88,8 @@ namespace LD38.Objects
         {
             if (IsHovering && IsInteractive)
             {
+                Debug.Log("Hovering: " + Name);
+
                 Main.Get.SetObjectText(string.Empty);
 
                 if (Main.Get.Player == null)

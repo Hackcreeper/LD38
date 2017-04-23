@@ -3,14 +3,24 @@
     public enum Quest
     {
         /// <summary>
-        /// Goal: Search and find the corrupted antenna
+        /// Goal: Find the base
         /// </summary>
-        FindTheAntenna,
+        FindTheBase,
+
+        /// <summary>
+        /// Goal: Analyse the corrupted antenna
+        /// </summary>
+        AnalyseTheAntenna,
 
         /// <summary>
         /// Goal: Search and find some ores in the mine
         /// </summary>
         TakeOresFromTheMine,
+
+        /// <summary>
+        /// Goal: Melt the ores in the furnace
+        /// </summary>
+        MeltTheOres,
 
         /// <summary>
         /// Goal: Repair the broken antenna with the ore

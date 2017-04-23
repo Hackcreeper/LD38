@@ -11,8 +11,8 @@ namespace LD38.Quests
         {
             switch (quest)
             {
-                case Quest.FindTheAntenna:
-                    return new FindTheAntenna();
+                case Quest.AnalyseTheAntenna:
+                    return new AnalyseTheAntenna();
 
                 case Quest.TakeOresFromTheMine:
                     return new TakeOresFromTheMine();
@@ -22,6 +22,12 @@ namespace LD38.Quests
 
                 case Quest.GoBackToSpaceship:
                     return new GoBackToSpaceship();
+
+                case Quest.FindTheBase:
+                    return new FindTheBase();
+
+                case Quest.MeltTheOres:
+                    return new MeltTheOres();
 
                 default:
                     throw new ArgumentOutOfRangeException("quest", quest, null);
