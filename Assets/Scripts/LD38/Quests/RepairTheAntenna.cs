@@ -34,7 +34,9 @@ namespace LD38.Quests
         public void End(QuestLog log)
         {
             Antenna.Disable();
-            Main.Get.Win();
+            Main.Get.RepairAntenna();
+
+            log.Start(Quest.GoBackToSpaceship);
         }
 
         public string GetDescription()

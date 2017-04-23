@@ -13,7 +13,7 @@ namespace LD38.Objects
         /// <summary>
         /// The maximum distance the player can have to interact with the object
         /// </summary>
-        protected const float MaxDistance = 5f;
+        [SerializeField] protected float MaxDistance = 5f;
 
         /// <summary>
         /// The name of the object (will be shown in the UI)
@@ -84,6 +84,11 @@ namespace LD38.Objects
             if (IsHovering && IsInteractive)
             {
                 Main.Get.SetObjectText(string.Empty);
+
+                if (Main.Get.Player == null)
+                {
+                    return;
+                }
 
                 var distance = Vector3.Distance(Main.Get.Player.position, transform.position);
                 if (!(distance <= MaxDistance)) return;

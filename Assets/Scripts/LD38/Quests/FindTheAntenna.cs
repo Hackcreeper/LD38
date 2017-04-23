@@ -16,6 +16,11 @@ namespace LD38.Quests
         /// </summary>
         protected Antenna Antenna;
 
+        /// <summary>
+        /// The ore instance
+        /// </summary>
+        protected Ore Ore;
+
         #endregion
 
         #region PUBLIC_METHODS
@@ -27,6 +32,7 @@ namespace LD38.Quests
         public void Start(QuestLog log)
         {
             Antenna = Object.FindObjectOfType<Antenna>();
+            Ore = Object.FindObjectOfType<Ore>();
         }
 
         /// <summary>
@@ -47,6 +53,8 @@ namespace LD38.Quests
         public void End(QuestLog log)
         {
             Antenna.Disable();
+            Ore.Enable();
+
             log.Start(Quest.TakeOresFromTheMine);
         }
 
