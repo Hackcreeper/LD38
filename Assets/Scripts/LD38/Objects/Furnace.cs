@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace LD38.Objects
 {
@@ -7,6 +8,19 @@ namespace LD38.Objects
         #region PROTECTED_VARS
 
         [SerializeField] protected Transform Iron;
+
+        [SerializeField] protected Transform[] Fires;
+
+        protected bool IsOn;
+
+        #endregion
+
+        #region PUBLIC_METHODS
+
+        public bool On
+        {
+            get { return IsOn; }
+        }
 
         #endregion
 
@@ -18,6 +32,13 @@ namespace LD38.Objects
             {
                 Iron.gameObject.SetActive(true);
             }
+
+            foreach (var fire in Fires)
+            {
+                fire.gameObject.SetActive(true);
+            }
+
+            IsOn = true;
         }
 
         #endregion

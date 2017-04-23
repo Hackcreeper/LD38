@@ -21,7 +21,7 @@ namespace LD38.Quests
 
         public bool IsFinished(QuestLog log)
         {
-            return false;
+            return Furnace.On;
         }
 
         public void End(QuestLog log)
